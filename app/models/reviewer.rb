@@ -6,4 +6,7 @@ class Reviewer < ApplicationRecord
 
   has_many :reviews, dependent: :destroy
 
+
+  attachment :profile_image
+
 end
