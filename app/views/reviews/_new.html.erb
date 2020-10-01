@@ -1,12 +1,12 @@
 <h2>New book</h2>
 
-<%= form_for(book) do |f| %>
+<%= form_for(review) do |f| %>
 
   <h4>Title</h4>
   <%= f.text_field :title, class: "col-xs-12" %>
 
   <h4>Body</h4>
-  <%= f.text_area :body, class: "col-xs-12" %><br>
+  <%= f.text_area :book_review, class: "col-xs-12" %><br>
  
   <%= f.submit 'Create Book', class: "cbotn btn btn-primary btn-block active" %>
 <% end %>
