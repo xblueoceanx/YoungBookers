@@ -4,7 +4,7 @@
       <%= render 'reviewers/info', user: @reviewer %>
       <%= render 'reviews/new', book: @review %>
     </div>
-   <div class="col-xs-9"> 
+   <div class="col-xs-9">
 
 <h2>Books</h2>
 
@@ -21,7 +21,7 @@
 <tr>
 <td align="left" width="200">
 	<%= link_to reviewer_path(book.reviewer) do %>
-	<%= attachment_image_tag @reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+	<%= attachment_image_tag @reviewer, :profile_image, :fill, 60, 60 %>
 	<% end %>
 </td>
 <td align="left" width="200"><%= link_to book.title, review_path(book) %></td>

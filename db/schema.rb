@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_09_25_045908) do
     t.string "telephone_number", default: "", null: false
     t.string "first_name_kana", default: "", null: false
     t.string "last_name_kana", default: "", null: false
-    t.integer "profile_image_id", null: false
+    t.integer "profile_image_id"
     t.index ["email"], name: "index_reviewers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_reviewers_on_reset_password_token", unique: true
   end
