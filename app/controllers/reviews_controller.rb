@@ -5,12 +5,13 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    @review = Review.new
   end
 
   def create
     @reviews = Review.all
   	@review = Review.new(review_params)
-    @review.user_id = current_reviewer.id
+    @review.reviewer_id = current_reviewer.id
     if @review.save
       flash[:notice] = "You have creatad book successfully."
       redirect_to review_path(@review)
@@ -59,7 +60,7 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:title, :book_review, :user_id)
+    params.require(:review).permit(:title, :book_review, :user_id, :reviewer_id)
   end
   
 end

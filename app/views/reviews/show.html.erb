@@ -2,8 +2,7 @@
 <div class="container">
 　<div class="row">
 	<div class="col-xs-3">
-      <%= render 'reviewers/info', reviewer: @review.user %>
-      <%= render 'reviews/new', review: @review_new %>
+      <%= render 'reviewers/info', reviewer: @review.reviewer %>
     </div>
    <div class="col-xs-9"> 
 
@@ -21,16 +20,16 @@
 <tr>
 <td align="left" width="200">
 	<%= link_to reviewer_path(@reviewer) do %>
-	<%= attachment_image_tag @reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+	<%= attachment_image_tag @reviewer, :profile_image, :fill, 60, 60 %>
   <br>
   <%= link_to @reviewer.last_name, reviewer_path(@reviewer) %>
 	<% end %>
 </td>
 <td align="left" width="100"><%= link_to @review.title, review_path(@review) %></td>
-<td valign="top" width="100"><%= @book.body %></td>
+<td valign="top" width="100"><%= @review.book_review %></td>
 
 
-<% if @review.user == current_user %>
+<% if @review.reviewer == current_reviewer %>
     <td valign="top" width="50"><%= link_to "Edit", edit_review_path(@review), class: "btn btn-success" %></td>
     <td valign="top" width="50"><%= link_to "Destroy", review_path(@review), class: "btn btn-danger", method: :delete, "data-confirm" => "本当に消しますか？" %></td>
 <% end %>

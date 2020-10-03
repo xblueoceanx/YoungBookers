@@ -9,6 +9,7 @@ class ReviewersController < ApplicationController
   end
 
   def show
+    @review = Review.find(params[:id])
   	@reviewer = Reviewer.find(params[:id])
   	@review = Review.new
     @reviews = @reviewer.reviews
