@@ -1,10 +1,10 @@
 
 <div class="container">
-　<div class="row">
+ <div class="row">
 	<div class="col-xs-3">
       <%= render 'reviewers/info', reviewer: @review.reviewer %>
     </div>
-   <div class="col-xs-9"> 
+   <div class="col-xs-9">
 
 <h1>Book detail</h1>
 
@@ -20,7 +20,7 @@
 <tr>
 <td align="left" width="200">
 	<%= link_to reviewer_path(@reviewer) do %>
-	<%= attachment_image_tag @reviewer, :profile_image, :fill, 60, 60 %>
+	<%= attachment_image_tag @reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
   <br>
   <%= link_to @reviewer.last_name, reviewer_path(@reviewer) %>
 	<% end %>
@@ -39,7 +39,7 @@
 </table>
 
 </div>
- 　</div>
+ </div>
  </div>
 
 

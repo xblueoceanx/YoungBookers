@@ -1,7 +1,7 @@
 <h2>プロフィール</h2>
 
  <div>
-  <%= attachment_image_tag current_reviewer, :profile_image, :fill, 60, 60 %>
+  <%= attachment_image_tag current_reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
  </div>
  <div>
   <spam>名前</spam>

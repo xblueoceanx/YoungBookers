@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-	 before_action :authenticate_reviewer!
+  before_action :authenticate_reviewer!
 
   def top
   end
@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
 
   def create
     @reviews = Review.all
-  	@review = Review.new(review_params)
+    @review = Review.new(review_params)
     @review.reviewer_id = current_reviewer.id
     if @review.save
       flash[:notice] = "You have creatad book successfully."

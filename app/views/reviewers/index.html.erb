@@ -1,5 +1,5 @@
 <div class="container">
-　<div class="row">
+ <div class="row">
 	<div class="col-xs-3">
       <%= render 'info', reviewer: @reviewer %>
     </div>
@@ -17,7 +17,7 @@
 <% @reviewers.each do |user| %>
 
 <tr>
-<td align="left" width="200"><%= attachment_image_tag user, :profile_image, :fill, 60, 60 %></td>
+<td align="left" width="200"><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
 <td valign="top" width="400"><%= user.last_name %></td>
 <td valign="top" width="25"><%= link_to "Show", reviewer_path(user) %></td>
 </tr>
@@ -28,5 +28,5 @@
 
 
 </div>
- 　</div>
+  </div>
  </div>

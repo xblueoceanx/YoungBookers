@@ -9,14 +9,13 @@ class ReviewersController < ApplicationController
   end
 
   def show
-    @review = Review.find(params[:id])
-  	@reviewer = Reviewer.find(params[:id])
-  	@review = Review.new
+    @reviewer = Reviewer.find(params[:id])
+    @review = Review.new
     @reviews = @reviewer.reviews
   end
 
   def edit
-  	@reviewer = Reviewer.find(params[:id])
+    @reviewer = Reviewer.find(params[:id])
     if @reviewer == current_reviewer
     else
       redirect_to reviewer_path(current_reviewer)
@@ -24,7 +23,7 @@ class ReviewersController < ApplicationController
   end
 
   def info
-  	@reviewer = Reviewer.find(params[:id])
+    @reviewer = Reviewer.find(params[:id])
   end
 
   def update
@@ -42,5 +41,5 @@ class ReviewersController < ApplicationController
   def reviewer_params
    params.require(:reviewer).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :email, :telephone_number, :encrypted_password, :profile_image )
   end
-  
+
 end
