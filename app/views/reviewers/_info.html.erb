@@ -1,14 +1,13 @@
-<h2>User info</h2>
-<div>
- <%= attachment_image_tag reviewer, :profile_image, :fill, 60, 60 %>
-</div>
+<h2>プロフィール</h2>
 
-<table class="table" width="600" cellspacing="0" cellpadding="5">
-<tr>
-<th><font size=3px>name</font></th>
-<th width="300"><font size=3px><%= reviewer.last_name %></font></th>
-</tr>
+ <div>
+  <%= attachment_image_tag reviewer, :profile_image, :fill, 60, 60 %>
+ </div>
+ <div>
+  <spam>名前</spam>
+  <%= reviewer.last_name %>
+ </div>
 
-<p>
+ <p>
   <%= link_to "", edit_reviewer_path(reviewer), class: "glyphicon glyphicon-wrench btn btn-default btn-block" %>
-</p>
+ </p>
