@@ -1,16 +1,10 @@
 <div class="col-md-6 col-md-offset-3">
-
-<h2>レビュー投稿</h2>
-
-<%= form_for(@review) do |f| %>
-
-  <h4>本のタイトル</h4>
-  <%= f.text_field :title, class: "col-xs-12" %>
-
-  <h4>本のレビュー</h4>
-  <%= f.text_area :book_review, class: "col-xs-12" %><br>
- 
-  <%= f.submit '投稿', class: "cbotn btn btn-primary btn-block active" %>
-<% end %>
-
+  <h2>レビュー投稿</h2>
+    <%= form_for(@review) do |f| %>
+      <h4>本のタイトル</h4>
+        <%= f.text_field :title, class: "col-xs-12" %>
+      <h4>本のレビュー</h4>
+        <%= f.text_area :book_review, class: "col-xs-12" %><br>
+      <%= f.submit '投稿', class: "cbotn btn btn-primary btn-block active" %>
+    <% end %>
 </div>

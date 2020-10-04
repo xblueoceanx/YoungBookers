@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'homes/about'
 
-  resources :reviews, only: [:new, :create, :index, :show, :edit, :destroy, :update]
+  resources :reviews, only: [:new, :create, :index, :show, :edit, :destroy, :update] do
+  	resource :favorites, only: [:create, :destroy]
+  end
 
   resources :reviewers, only: [:show, :edit, :update, :index]
 

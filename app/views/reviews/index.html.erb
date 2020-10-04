@@ -10,40 +10,33 @@
 <% end %>
 
 <div class="container">
- <div class="row">
-  <div class="col-xs-3">
-    <%= render 'info', reviewer: @reviewer %>
+  <div class="row">
+    <div class="col-xs-3">
+      <%= render 'info', reviewer: @reviewer %>
     </div>
-   <div class="col-xs-9"> 
 
-<h2>レビュー</h2>
+    <div class="col-xs-9">
+      <h2>レビュー</h2>
+        <table class="table" width="600" cellspacing="0" cellpadding="5" >
+          <tr>
+            <th width="200"><font></font></th>
+            <th width="200"><font>タイトル</font></th>
+            <th width="400"><font>レビュー</font></th>
+          </tr>
+          <% @reviews.each do |book| %>
+          <tr>
+            <td align="left" width="200">
+	            <%= link_to reviewer_path(book.reviewer) do %>
+	              <%= attachment_image_tag book.reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+	            <% end %>
+            </td>
+            <td align="left" width="200"><%= link_to book.title, review_path(book) %></td>
+            <td valign="top" width="400"><%= book.book_review %></td>
+          </tr>
+          <% end %>
+        </table>
+    </div>
 
-<table class="table" width="600" cellspacing="0" cellpadding="5" >
-
-<tr>
-<th width="200"><font></font></th>
-<th width="200"><font>タイトル</font></th>
-<th width="400"><font>レビュー</font></th>
-</tr>
-
-<% @reviews.each do |book| %>
-
-<tr>
-<td align="left" width="200">
-	<%= link_to reviewer_path(book.reviewer) do %>
-	<%= attachment_image_tag book.reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
-	<% end %>
-</td>
-<td align="left" width="200"><%= link_to book.title, review_path(book) %></td>
-<td valign="top" width="400"><%= book.book_review %></td>
-</tr>
-
-<% end %>
-
-</table>
-
-
+  </div>
 </div>
- </div>
- </div>
 

@@ -33,6 +33,9 @@ class ReviewsController < ApplicationController
     @reviewer = @review.reviewer
   end
 
+  def info
+  end
+
   def edit
     @review = Review.find(params[:id])
     if @review.reviewer == current_reviewer
