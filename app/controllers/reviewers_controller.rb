@@ -6,12 +6,14 @@ class ReviewersController < ApplicationController
     @review = Review.new
     @reviewers = Reviewer.all
     @reviewer = Reviewer.find(current_reviewer.id)
+    @all_ranks = Review.find(Favorite.group(:review_id).order('count(review_id) desc').limit(3).pluck(:review_id))
   end
 
   def show
     @reviewer = Reviewer.find(params[:id])
     @review = Review.new
     @reviews = @reviewer.reviews
+    @all_ranks = Review.find(Favorite.group(:review_id).order('count(review_id) desc').limit(3).pluck(:review_id))
   end
 
   def edit

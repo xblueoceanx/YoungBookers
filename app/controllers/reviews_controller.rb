@@ -25,15 +25,14 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
     @review = Review.new
     @reviewer = Reviewer.find(current_reviewer.id)
+    @all_ranks = Review.find(Favorite.group(:review_id).order('count(review_id) desc').limit(3).pluck(:review_id))
   end
 
   def show
     @review = Review.find(params[:id])
     @review_new = Review.new
     @reviewer = @review.reviewer
-  end
-
-  def info
+    @all_ranks = Review.find(Favorite.group(:review_id).order('count(review_id) desc').limit(3).pluck(:review_id))
   end
 
   def edit
@@ -65,5 +64,5 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:title, :book_review, :user_id, :reviewer_id)
   end
-  
+
 end
