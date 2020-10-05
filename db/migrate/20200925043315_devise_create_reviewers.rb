@@ -39,7 +39,7 @@ class DeviseCreateReviewers < ActiveRecord::Migration[5.2]
       t.string :telephone_number, null: false, default: ""
       t.string :first_name_kana,  null: false, default: ""
       t.string :last_name_kana, null: false, default: ""
-      t.integer :profile_image_id
+      t.string :profile_image_id
     end
 
     add_index :reviewers, :email,                unique: true
