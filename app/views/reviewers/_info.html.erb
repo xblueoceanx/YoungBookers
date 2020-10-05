@@ -1,20 +1,22 @@
-<h2>プロフィール</h2>
+<div class="box-info">
+  <h2 class="box-info-title">プロフィール</h2>
 
-  <div>
-    <%= attachment_image_tag reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
-  </div>
-  <div>
-    <spam>名前</spam>
-    <%= reviewer.last_name %>
-  </div>
+    <div style="text-align: center;">
+      <%= attachment_image_tag reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+    </div>
+    <div style="text-align: center;">
+      <span>名前</span>
+        <%= reviewer.last_name %>
+    </div>
 
-<!-- ボタン -->
-  <p>
-    <%= link_to "", edit_reviewer_path(reviewer), class: "glyphicon glyphicon-wrench btn btn-default btn-block" %>
-  </p>
+  <!-- ボタン -->
+    <div class="box-button">
+      <p>
+        <%= link_to "", edit_reviewer_path(reviewer), class: "glyphicon glyphicon-wrench btn btn-default btn-block" %>
+      </p>
 
-  <p>
-    <%= link_to "投稿する", new_review_path(current_reviewer), class: "btn btn-primary btn-block" %>
-  </p>
-
-<!-- ランキング -->
+      <p>
+        <%= link_to "投稿する", new_review_path(current_reviewer), class: "btn btn-primary btn-block" %>
+      </p>
+    </div>
+</div>

@@ -26,3 +26,57 @@
 body {
 	padding-top :50px;
 }
+
+.box-info {
+    margin: 2em 0;
+    padding-bottom: 1px;
+    background: #dcefff;
+}
+
+.box-info .box-info-title {
+    font-size: 1.5em;
+    background: #5fb3f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.box-info div {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.box-button {
+	padding: 1px;
+}
+
+.box-rank{
+    margin:2em 0;
+    position: relative;
+    padding: 0.25em 1em;
+    border: solid 2px #ffcb8a;
+    border-radius: 3px 0 3px 0;
+}
+.box-rank:before,.box-rank:after
+{
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 10px;
+    border: solid 2px #ffcb8a;
+    border-radius: 50%;
+}
+.box-rank:after {
+    top:-12px;
+    left:-12px;
+}
+.box-rank:before {
+    bottom:-12px;
+    right:-12px;
+}
+.box-rank p {
+    margin: 0;
+    padding: 0;
+}
