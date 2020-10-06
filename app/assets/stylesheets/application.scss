@@ -41,32 +41,32 @@ body {
 }
 
 header {
-    padding : 8px;
-    margin: 0 18px;
+  padding : 8px;
+  margin: 0 18px;
 }
 
 .navbar-fixed-top, .navbar-fixed-bottom {
-    border-radius: 100px;
+  border-radius: 100px;
 }
 
 .box-info {
-    margin: 2em 0;
-    background: #dcefff;
+  margin: 2em 0;
+  background: #dcefff;
 }
 
 .box-info .box-info-title {
-    font-size: 1.5em;
-    background: #5fb3f5;
-    padding: 4px;
-    text-align: center;
-    color: #FFF;
-    font-weight: bold;
-    letter-spacing: 0.05em;
+  font-size: 1.5em;
+  background: #5fb3f5;
+  padding: 4px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
 }
 
 .box-info div {
-    padding: 15px 10px;
-    margin: 0;
+  padding: 15px 10px;
+  margin: 0;
 }
 
 .box-button {
@@ -74,53 +74,53 @@ header {
 }
 
 .box-rank{
-    margin:2em 0;
-    position: relative;
-    padding: 0.25em 1em;
-    border: solid 2px #ffcb8a;
-    border-radius: 3px 0 3px 0;
+  margin:2em 0;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #ffcb8a;
+  border-radius: 3px 0 3px 0;
+  background-color: #FFFFCC;
 }
 
-.box-rank:before,.box-rank:after
-{
-    content: '';
-    position: absolute;
-    width:10px;
-    height: 10px;
-    border: solid 2px #ffcb8a;
-    border-radius: 50%;
+.box-rank:before,.box-rank:after {
+  content: '';
+  position: absolute;
+  width:10px;
+  height: 10px;
+  border: solid 2px #ffcb8a;
+  border-radius: 50%;
 }
 
 .box-rank:after {
-    top:-12px;
-    left:-12px;
+  top:-12px;
+  left:-12px;
 }
 
 .box-rank:before {
-    bottom:-12px;
-    right:-12px;
+  bottom:-12px;
+  right:-12px;
 }
 
 .box-rank p {
-    margin: 14px;
-    padding: 0;
+  margin: 14px;
+  padding: 0;
 }
 
 .wrapper{
-    min-height: 100vh;
-    position: relative;
-    padding-bottom: 120px;
-    box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
 }
 
 footer{
-    width: 100%;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
 }
 
 .top-box {
