@@ -25,11 +25,28 @@
 
 body {
 	padding-top :80px;
+    background-color: #FFFDE7;
+    background-size: 80px 80px;
+    background-image:
+    linear-gradient(rgba(215,204,200,.7) 1%, rgba(215,204,200,.7) 1%, transparent 1%,
+    transparent 99%, rgba(215,204,200,.7) 99%, rgba(215,204,200,.7) 100%),
+    linear-gradient(90deg, rgba(215,204,200,.7) 1%, rgba(215,204,200,.7) 1%, transparent 1%,
+    transparent 99%, rgba(215,204,200,.7) 99%, rgba(215,204,200,.7) 100%),
+    linear-gradient(transparent, transparent 25%, rgba(215,204,200,.4) 25%, rgba(215,204,200,.4) 26%, transparent 26%,
+    transparent 50%, rgba(215,204,200,.4) 50%, rgba(215,204,200,.4) 51%, transparent 51%,
+    transparent 75%, rgba(215,204,200,.4) 75%, rgba(215,204,200,.4) 76%, transparent 76%, transparent 100%),
+    linear-gradient(90deg, transparent, transparent 25%, rgba(215,204,200,.4) 25%, rgba(215,204,200,.4) 26%, transparent 26%,
+    transparent 50%, rgba(215,204,200,.4) 50%, rgba(215,204,200,.4) 51%, transparent 51%,
+    transparent 75%, rgba(215,204,200,.4) 75%, rgba(215,204,200,.4) 76%, transparent 76%, transparent 100%);
 }
 
 header {
     padding : 8px;
     margin: 0 18px;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    border-radius: 100px;
 }
 
 .box-info {
@@ -63,6 +80,7 @@ header {
     border: solid 2px #ffcb8a;
     border-radius: 3px 0 3px 0;
 }
+
 .box-rank:before,.box-rank:after
 {
     content: '';
@@ -72,14 +90,17 @@ header {
     border: solid 2px #ffcb8a;
     border-radius: 50%;
 }
+
 .box-rank:after {
     top:-12px;
     left:-12px;
 }
+
 .box-rank:before {
     bottom:-12px;
     right:-12px;
 }
+
 .box-rank p {
     margin: 14px;
     padding: 0;
@@ -97,7 +118,18 @@ footer{
     background-color: black;
     color: #fff;
     text-align: center;
-    padding: 30px 0;
+    padding: 10px 0;
     position: absolute;
     bottom: 0;
+}
+
+.top-box {
+    text-align:center;
+}
+
+.navbar-brand {
+  background-image: url(logo.jpg);
+  background-size: contain;
+  height: 50px;
+  width: 50px;
 }

@@ -15,12 +15,17 @@
       <div class="container">
        <div class="row">
         <nav class="nav navbar-nav navbar-left">
-         <span class="bookers-title">YoungBookers</span>
+         <span class="bookers-title">
+           <a class="navbar-brand" href="/"></a>
+         </span>
         </nav>
 
         <div id="slidemenu">
          <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
           <% if reviewer_signed_in? %>
+           <li class="">
+            <%= link_to "TOP", root_path(current_reviewer.id), class: "glyphicon glyphicon-home" %>
+           </li>
            <li class="">
             <%= link_to "マイページ", reviewer_path(current_reviewer.id), class: "glyphicon glyphicon-home" %>
            </li>
@@ -35,7 +40,7 @@
            </li>
           <% else %>
            <li class="">
-            <%= link_to "Home", root_path, class: "glyphicon glyphicon-home" %>
+            <%= link_to "TOP", root_path, class: "glyphicon glyphicon-home" %>
            </li>
            <li class="">
             <%= link_to "About", homes_about_path, class: "glyphicon glyphicon-link" %>
