@@ -9,27 +9,24 @@
   </div>
 <% end %>
 
-<div class="col-md-6 col-md-offset-3">
-  <h2>マイレビュー編集</h2>
+<div class="box-myr col-md-6 col-md-offset-3">
+  <h2 class="t-myr"><strong>マイレビュー編集</strong></h2>
     <%= form_for(@review) do |f| %>
       <div>
-        <label>本のタイトル</label>
+        <label class="m-b-tr">本のタイトル</label>
           <div>
             <%= f.text_field :title, autofocus: true, class: "col-xs-12" %>
           </div>
       </div>
       <div>
-        <label>本のレビュー</label>
+        <label class="m-b-tr">本のレビュー</label>
           <div>
             <%= f.text_area :book_review, autofocus: true, class: "col-xs-12" %>
           </div>
       </div>
       <!-- ボタン群 -->
-      <p>
-        <%= f.submit "更新する",  class: "botn btn btn-primary btn-block" %>
+      <p class="up-btn">
+        <%= f.submit "更新する",  class: "box-up botn btn btn-primary btn-block" %>
       </p>
     <% end %>
-    <%= link_to "Show", review_path(@review) %>
-    |
-    <a href="/reviews">Back</a>
 </div>

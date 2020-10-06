@@ -24,20 +24,20 @@
 }
 
 body {
-	padding-top :80px;
-    background-color: #FFFDE7;
-    background-size: 80px 80px;
-    background-image:
-    linear-gradient(rgba(215,204,200,.7) 1%, rgba(215,204,200,.7) 1%, transparent 1%,
-    transparent 99%, rgba(215,204,200,.7) 99%, rgba(215,204,200,.7) 100%),
-    linear-gradient(90deg, rgba(215,204,200,.7) 1%, rgba(215,204,200,.7) 1%, transparent 1%,
-    transparent 99%, rgba(215,204,200,.7) 99%, rgba(215,204,200,.7) 100%),
-    linear-gradient(transparent, transparent 25%, rgba(215,204,200,.4) 25%, rgba(215,204,200,.4) 26%, transparent 26%,
-    transparent 50%, rgba(215,204,200,.4) 50%, rgba(215,204,200,.4) 51%, transparent 51%,
-    transparent 75%, rgba(215,204,200,.4) 75%, rgba(215,204,200,.4) 76%, transparent 76%, transparent 100%),
-    linear-gradient(90deg, transparent, transparent 25%, rgba(215,204,200,.4) 25%, rgba(215,204,200,.4) 26%, transparent 26%,
-    transparent 50%, rgba(215,204,200,.4) 50%, rgba(215,204,200,.4) 51%, transparent 51%,
-    transparent 75%, rgba(215,204,200,.4) 75%, rgba(215,204,200,.4) 76%, transparent 76%, transparent 100%);
+  padding-top :80px;
+  background-color: #FFFDE7;
+  background-size: 80px 80px;
+  background-image:
+  linear-gradient(rgba(215,204,200,.7) 1%, rgba(215,204,200,.7) 1%, transparent 1%,
+  transparent 99%, rgba(215,204,200,.7) 99%, rgba(215,204,200,.7) 100%),
+  linear-gradient(90deg, rgba(215,204,200,.7) 1%, rgba(215,204,200,.7) 1%, transparent 1%,
+  transparent 99%, rgba(215,204,200,.7) 99%, rgba(215,204,200,.7) 100%),
+  linear-gradient(transparent, transparent 25%, rgba(215,204,200,.4) 25%, rgba(215,204,200,.4) 26%, transparent 26%,
+  transparent 50%, rgba(215,204,200,.4) 50%, rgba(215,204,200,.4) 51%, transparent 51%,
+  transparent 75%, rgba(215,204,200,.4) 75%, rgba(215,204,200,.4) 76%, transparent 76%, transparent 100%),
+  linear-gradient(90deg, transparent, transparent 25%, rgba(215,204,200,.4) 25%, rgba(215,204,200,.4) 26%, transparent 26%,
+  transparent 50%, rgba(215,204,200,.4) 50%, rgba(215,204,200,.4) 51%, transparent 51%,
+  transparent 75%, rgba(215,204,200,.4) 75%, rgba(215,204,200,.4) 76%, transparent 76%, transparent 100%);
 }
 
 header {
@@ -140,4 +140,39 @@ footer{
   height: 600px;
   width: 1000px;
   margin : 0 auto;
+}
+
+.box-myr {
+  background-color: #FFFFCC;
+  border-radius: 6%;
+  margin-top : 50px;
+}
+
+.t-myr {
+  border-bottom: solid 5px #000;
+}
+
+.box-up {
+  margin-top : 170px;
+}
+
+.box-up-p {
+  margin : 10px 0;
+}
+
+.up-btn {
+  padding: 0 80px;
+}
+
+#review_book_review {
+  height: 150px;
+}
+
+.m-b-tr {
+  margin-top : 12px;
+  font-size: 1.5em;
+}
+
+.rev-t {
+  text-align: center;
 }
