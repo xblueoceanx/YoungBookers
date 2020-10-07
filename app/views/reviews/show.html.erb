@@ -1,38 +1,41 @@
 <div class="container">
   <div class="row">
 
-	  <div class="col-xs-3">
+    <div class="col-xs-3">
       <%= render 'reviewers/info', reviewer: @review.reviewer %>
       <%= render 'rank', all_ranks: @all_ranks %>
     </div>
 
-    <div class="col-xs-9">
+    <div class="r-b-s col-xs-9">
       <h1>レビュー詳細</h1>
-        <table class="table" width="650" cellspacing="0" cellpadding="5" >
-          <tr>
-            <th width="200"><font></font></th>
-            <th width="100"><font></font></th>
-            <th width="100"><font></font></th>
-            <th width="50"><font></font></th>
-            <th width="50"><font></font></th>
-            <th width="50"><font></font></th>
-          </tr>
-          <tr>
-            <td align="left" width="200">
-	            <%= link_to reviewer_path(@reviewer) do %>
-	              <%= attachment_image_tag @reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+        <div class="r-b-s-box">
+              <%= link_to reviewer_path(@reviewer) do %>
+                <%= attachment_image_tag @reviewer, :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %>
                   <br>
-                    <%= link_to @reviewer.last_name, reviewer_path(@reviewer) %>
-	            <% end %>
-            </td>
-            <td align="left" width="100"><%= link_to @review.title, review_path(@review) %></td>
-            <td valign="top" width="100"><%= @review.book_review %></td>
+                  <div class="r-b-s-name">
+                    <%= link_to @reviewer.last_name, reviewer_path(@reviewer) %> さん
+                  </div>
+              <% end %>
+            <div>
+              <h4><strong>タイトル</strong></h4>
+              <div class="r-b-s-box-tr">
+                <%= @review.title %>
+              </div>
+            </div>
+            <div>
+              <h4><strong>レビュー</strong></h4>
+              <div class="r-b-s-box-tr">
+                <%= @review.book_review %>
+              </div>
+            </div>
+            <div class="r-b-s-box-ed">
             <% if @review.reviewer == current_reviewer %>
-              <td valign="top" width="50"><%= link_to "編集", edit_review_path(@review), class: "btn btn-success" %></td>
-              <td valign="top" width="50"><%= link_to "削除", review_path(@review), class: "btn btn-danger", method: :delete, "data-confirm" => "本当に消しますか？" %></td>
+              <a><%= link_to "編集", edit_review_path(@review), class: "btn btn-success" %></a>
+              <a><%= link_to "削除", review_path(@review), class: "btn btn-danger", method: :delete, "data-confirm" => "本当に消しますか？" %></a>
             <% end %>
+            </div>
             <!-- いいね機能 -->
-            <td>
+            <div class="r-b-s-heart">
               <% if @review.favorited_by?(current_reviewer) %>
                 <%= link_to review_favorites_path(@review), method: :delete do %>
                   <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
@@ -44,13 +47,9 @@
                     <span class="glyphicon glyphicon-heart" aria-hidden="true"></span><%= @review.favorites.count %>
                 <% end %>
               <% end %>
-            </td>
+            </div>
             <!-- いいね機能 -->
-          </tr>
-        </table>
+        </div>
       </div>
-
   </div>
 </div>
-
-

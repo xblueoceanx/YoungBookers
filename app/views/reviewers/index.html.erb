@@ -6,19 +6,19 @@
       <%= render 'rank', all_ranks: @all_ranks %>
     </div>
 
-    <div class="col-xs-9">
-      <h2>レビュアー</h2>
-        <table class="table" width="900" cellspacing="0" cellpadding="5" >
-          <tr>
-            <th width="200"><font>プロフィール画像</font></th>
+    <div class="box-reviewer col-xs-9">
+      <h2 class="center-t"><strong>レビュアー</strong></h2>
+        <table class="table" width="1000" cellspacing="0" cellpadding="5" >
+          <tr class="box-border">
+            <th width="400"><font>プロフィール画像</font></th>
             <th width="400"><font>レビュアー</font></th>
-            <th width="300"><font></font></th>
+            <th width="200"><font></font></th>
           </tr>
           <% @reviewers.each do |user| %>
           <tr>
-            <td align="left" width="200"><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
+            <td align="left" width="400"><%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
             <td valign="top" width="400"><%= user.last_name %></td>
-            <td valign="top" width="300"><%= link_to "レビューを見る", reviewer_path(user) %></td>
+            <td valign="top" width="200"><%= link_to "レビューを見る", reviewer_path(user) %></td>
           </tr>
           <% end %>
         </table>

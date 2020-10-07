@@ -65,7 +65,7 @@ header {
 }
 
 .box-info div {
-  padding: 15px 10px;
+  padding: 5px 10px;
   margin: 0;
 }
 
@@ -77,9 +77,9 @@ header {
   margin:2em 0;
   position: relative;
   padding: 0.25em 1em;
-  border: solid 2px #ffcb8a;
+  border: solid 2px #008800;
   border-radius: 3px 0 3px 0;
-  background-color: #FFFFCC;
+  background-color: #E9FFA5;
 }
 
 .box-rank:before,.box-rank:after {
@@ -87,7 +87,7 @@ header {
   position: absolute;
   width:10px;
   height: 10px;
-  border: solid 2px #ffcb8a;
+  border: solid 2px #008800;
   border-radius: 50%;
 }
 
@@ -124,8 +124,22 @@ footer{
 }
 
 .top-box {
-    text-align:center;
+  text-align:center;
 }
+
+.top-box p {
+  font-size: 3em;
+  color: #FFF;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  /*文字の装飾は省略*/
+  }
 
 .navbar-brand {
   background-image: url(logo.jpg);
@@ -144,8 +158,9 @@ footer{
 
 .box-myr {
   background-color: #FFFFCC;
-  border-radius: 6%;
+  border-radius: 10px;
   margin-top : 50px;
+  border: solid 2px #ffcb8a;
 }
 
 .t-myr {
@@ -175,4 +190,55 @@ footer{
 
 .rev-t {
   text-align: center;
+}
+
+.r-b-s {
+  text-align: center;
+  margin-top : 20px;
+}
+
+.r-b-s-box {
+  margin-top : 30px;
+  padding: 18px 0 ;
+  border: solid 2px #ffcb8a;
+  border-radius: 10px;
+  background-color: #FFFFCC;
+}
+
+.r-b-s-name {
+  font-size: 1.5em;
+}
+
+.r-b-s-box-tr {
+  border: solid 1px black;
+  background-color: white;
+  width: 50%;
+  margin : 0 auto;
+}
+
+.r-b-s-box-ed {
+  margin : 10px 0;
+}
+
+.glyphicon-heart {
+  color:red;
+}
+
+.center-t {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.box-reviewer {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #474747;
+  background: #FFFFCC;
+  border-left: double 7px #ffcb8a;
+  border-right: double 7px #ffcb8a;
+}
+
+.table > tbody > tr > th {
+  border-top:3px solid black;
+  border-bottom:3px solid black;
 }
