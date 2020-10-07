@@ -7,6 +7,7 @@ class Reviewer < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
+  validates :last_name, presence: true
 
   attachment :profile_image
 

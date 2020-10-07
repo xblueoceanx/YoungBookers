@@ -2,8 +2,8 @@ class Review < ApplicationRecord
 
   belongs_to :reviewer
 
-  validates :title, presence: true
-  validates :book_review, presence: true,length: {maximum: 200 }
+  validates :title, presence: true, length: {maximum: 50 }
+  validates :book_review, presence: true, length: {maximum: 500 }
 
   has_many :favorites, dependent: :destroy
 

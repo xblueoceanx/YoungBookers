@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
       redirect_to review_path(@review)
     else
      @reviewer = current_reviewer
-     render :index
+     render :new
     end
   end
 
