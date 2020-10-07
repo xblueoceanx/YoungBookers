@@ -18,11 +18,13 @@
 
     <div class="box-reviewer col-xs-9">
       <h2 class="center-t"><strong>レビュー</strong></h2>
-        <table class="table" width="600" cellspacing="0" cellpadding="5" >
+        <table class="table" width="950" cellspacing="0" cellpadding="5" >
           <tr>
             <th width="200"><font></font></th>
             <th width="200"><font>タイトル</font></th>
             <th width="400"><font>レビュー</font></th>
+            <th width="100"><font></font></th>
+            <th width="50"><font></font></th>
           </tr>
           <% @reviews.each do |book| %>
           <tr>
@@ -31,8 +33,10 @@
 	              <%= attachment_image_tag book.reviewer, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
 	            <% end %>
             </td>
-            <td align="left" width="200"><%= link_to book.title, review_path(book) %></td>
+            <td align="left" width="200"><%= book.title %></td>
             <td valign="top" width="400"><%= book.book_review %></td>
+            <td align="left" width="100"><%= link_to "詳細へ", review_path(book) %></td>
+            <td align="left" width="50"><p class="glyphicon glyphicon-heart" aria-hidden="true"><%=  "#{book.favorites.count}" %></p></td>
           </tr>
           <% end %>
         </table>
