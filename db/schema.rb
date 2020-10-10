@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_04_050623) do
+ActiveRecord::Schema.define(version: 2020_10_10_070356) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "reviewer_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_10_04_050623) do
     t.string "telephone_number", default: "", null: false
     t.string "first_name_kana", default: "", null: false
     t.string "last_name_kana", default: "", null: false
-    t.string "profile_image_id"
+    t.string "profile_image_id", default: "", null: false
     t.index ["email"], name: "index_reviewers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_reviewers_on_reset_password_token", unique: true
   end
