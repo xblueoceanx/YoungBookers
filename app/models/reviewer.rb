@@ -11,4 +11,12 @@ class Reviewer < ApplicationRecord
 
   attachment :profile_image
 
+  def hoge
+  	puts "hoge"
+  end
+
+  def fuga
+  	"fuga"
+  end
+
 end

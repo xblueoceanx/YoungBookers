@@ -9,6 +9,10 @@
   </div>
 <% end %>
 
+<div>
+  <%= flash[:alert] %>
+</div>
+
 <div class="box-myr col-md-6 col-md-offset-3">
   <h2 class="t-myr">プロフィール編集画面</h2>
     <%= form_for(@reviewer) do |f| %>
