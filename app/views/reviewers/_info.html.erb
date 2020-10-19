@@ -2,7 +2,7 @@
   <h2 class="box-info-title">プロフィール</h2>
 
     <div style="text-align: center;">
-      <%= attachment_image_tag reviewer, :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %>
+      <%= attachment_image_tag asset_path(reviewer), :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %>
     </div>
     <div style="text-align: center;">
         <strong><%= reviewer.last_name %></strong>
