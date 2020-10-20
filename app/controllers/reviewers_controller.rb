@@ -29,24 +29,6 @@ class ReviewersController < ApplicationController
   end
 
   def update
-    # result = Vision.get_image_data(reviewer.profile_image)
-    #profile_image = params[:reviewer][:profile_image].clone
-    #result = Vision.get_image_data(profile_image)
-    # unless result.values.include?("LIKELY") || result.values.include?("VERY_LIKELY")
-    #   reviewer = Reviewer.find(params[:id])
-    #   if reviewer.update(reviewer_params)
-    #     flash[:notice] = "アップデートが成功しました"
-    #     redirect_to reviewer_path(reviewer)
-    #   else
-    #     @reviewer = reviewer
-    #     flash[:alert] = "アップデートが失敗しました"
-    #     render :edit
-    #   end
-    # else
-    #   @reviewer = reviewer
-    #   flash[:alert] = "画像が不適切な可能性があります"
-    #   render :edit
-    #end
     reviewer = Reviewer.find(params[:id])
     begin
       ActiveRecord::Base.transaction do

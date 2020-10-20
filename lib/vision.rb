@@ -10,8 +10,6 @@ module Vision
 
       # 画像をbase64にエンコード
       base64_image = Base64.encode64(open("#{Rails.root}/tmp/uploads/store/#{profile_image.id}").read)
-      # file = profile_image.tempfile.read
-      # base64_image = Base64.encode64(file)
 
       # APIリクエスト用のJSONパラメータ
       params = {
