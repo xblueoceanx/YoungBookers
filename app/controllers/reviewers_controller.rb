@@ -29,18 +29,42 @@ class ReviewersController < ApplicationController
   end
 
   def update
+    # result = Vision.get_image_data(reviewer.profile_image)
+    #profile_image = params[:reviewer][:profile_image].clone
+    #result = Vision.get_image_data(profile_image)
+    # unless result.values.include?("LIKELY") || result.values.include?("VERY_LIKELY")
+    #   reviewer = Reviewer.find(params[:id])
+    #   if reviewer.update(reviewer_params)
+    #     flash[:notice] = "アップデートが成功しました"
+    #     redirect_to reviewer_path(reviewer)
+    #   else
+    #     @reviewer = reviewer
+    #     flash[:alert] = "アップデートが失敗しました"
+    #     render :edit
+    #   end
+    # else
+    #   @reviewer = reviewer
+    #   flash[:alert] = "画像が不適切な可能性があります"
+    #   render :edit
+    #end
     reviewer = Reviewer.find(params[:id])
-    result = Vision.get_image_data(reviewer.profile_image)
-    unless result.values.include?("LIKELY") || result.values.include?("VERY_LIKELY")
-      if reviewer.update(reviewer_params)
-        flash[:notice] = "アップデートが成功しました"
-        redirect_to reviewer_path(reviewer)
-      else
-        @reviewer = reviewer
-        flash[:alert] = "アップデートが失敗しました"
-        render :edit
+    begin
+      ActiveRecord::Base.transaction do
+        if reviewer.update(reviewer_params)
+          result = Vision.get_image_data(reviewer.profile_image)
+          if result.values.include?("LIKELY") || result.values.include?("VERY_LIKELY")
+            raise 'invalid image'
+          end
+
+          flash[:notice] = "アップデートが成功しました"
+          redirect_to reviewer_path(reviewer)
+        else
+          @reviewer = reviewer
+          flash[:alert] = "アップデートが失敗しました"
+          render :edit
+        end
       end
-    else
+    rescue
       @reviewer = reviewer
       flash[:alert] = "画像が不適切な可能性があります"
       render :edit
